@@ -1,8 +1,7 @@
 """
 Test custom Django management commands
 """
-from dataclasses import dataclass
-from importlib.resources import path
+
 from unittest.mock import patch
 
 from psycopg2 import OperationalError as Psycopg2Error
