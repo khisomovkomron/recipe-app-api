@@ -2,8 +2,6 @@
 Tests for the user API.
 """
 
-import email
-from re import A
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.urls import reverse
