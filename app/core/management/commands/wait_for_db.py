@@ -1,7 +1,6 @@
 """
 Django command to wait for the database to be available
 """
-from lib2to3.pgen2.token import OP
 import time
 
 from psycopg2 import OperationalError as Psycopg2OpError

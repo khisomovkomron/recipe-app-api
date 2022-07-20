@@ -1,7 +1,6 @@
 """Tests the model"""
-
 from decimal import Decimal
-from statistics import mode
+
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
@@ -19,7 +18,7 @@ class ModelTests(TestCase):
     def test_create_user_with_email_successful(self):
         """Test creating a user with an email is successful"""
         email = 'test@example.com'
-        password = "testpass123"
+        password = 'testpass123'
         user = get_user_model().objects.create_user(
             email=email,
             password=password,
@@ -49,7 +48,7 @@ class ModelTests(TestCase):
         """Test creating a superuser"""
         user = get_user_model().objects.create_superuser(
             'test@example.com',
-            'test123'
+            'test123',
         )
 
         self.assertTrue(user.is_superuser)
@@ -70,7 +69,6 @@ class ModelTests(TestCase):
         )
 
         self.assertEqual(str(recipe), recipe.title)
-
 
     def test_create_tag(self):
         """Test creating a tag is successful"""
